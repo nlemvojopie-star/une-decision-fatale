@@ -1,0 +1,559 @@
+/* Retire les marges par défaut et facilite le calcul des tailles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Rend les déplacements vers les ancres plus doux */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Couleurs et style général de la page */
+body {
+  background: #f4efe8;
+  color: #2f2a27;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.8;
+}
+
+/* Empêche le contenu de toucher les bords et centre la page */
+main {
+  background: #fffdf9;
+  box-shadow: 0 8px 25px rgba(70, 45, 30, 0.12);
+  margin: 40px auto;
+  max-width: 900px;
+  padding: 55px 70px;
+}
+
+/* En-tête fixé en haut du document */
+.entete {
+  background: #3e1722;
+  padding: 15px 20px;
+}
+
+/* Aligne le logo et le menu */
+.entete-contenu {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+/* Style du nom du roman dans l'en-tête */
+.logo {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.identite-auteur {
+  display: flex;
+  flex-direction: column;
+}
+
+.auteur-haut {
+  color: #ead4cb;
+  font-family: Arial, sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  margin: 0;
+  text-align: left;
+}
+
+/* Place les liens du menu sur une même ligne */
+.navigation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  justify-content: center;
+}
+
+/* Style des liens du menu */
+.navigation a {
+  color: #f5c6b4;
+  font-family: Arial, sans-serif;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+/* Style au passage de la souris */
+.navigation a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Contour visible lors de la navigation au clavier */
+.navigation a:focus-visible,
+.logo:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 4px;
+}
+
+/* Zone principale avec titre, image et bouton */
+.hero {
+  text-align: center;
+}
+
+/* Titre principal */
+h1 {
+  color: #7b2638;
+  font-size: 2.6rem;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+/* Tous les titres de niveau 2 */
+h2 {
+  border-bottom: 1px solid #d8b9a5;
+  color: #7b2638;
+  font-size: 1.6rem;
+  margin: 50px 0 20px;
+  padding-bottom: 8px;
+}
+
+/* Titre de chapitre dans l'extrait */
+h3 {
+  color: #7b2638;
+  font-size: 1.35rem;
+  margin: 0 0 24px;
+  text-align: center;
+}
+
+/* Phrase d'accroche */
+.introduction {
+  color: #765c50;
+  font-size: 1.2rem;
+  font-style: italic;
+  margin: 24px auto;
+  max-width: 650px;
+  text-align: center;
+}
+
+/* Bouton qui contient la couverture */
+.bouton-couverture {
+  background: transparent;
+  border: none;
+  cursor: zoom-in;
+  display: inline-block;
+  padding: 0;
+}
+
+/* Image du livre sur la page */
+.bouton-couverture img {
+  border: 1px solid #d8b9a5;
+  border-radius: 10px;
+  box-shadow: 0 12px 35px rgba(70, 45, 30, 0.25);
+  display: block;
+  height: auto;
+  max-width: 380px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+}
+
+/* Légère animation au survol de la couverture */
+.bouton-couverture:hover img {
+  box-shadow: 0 16px 40px rgba(70, 45, 30, 0.35);
+  transform: scale(1.03);
+}
+
+/* Contour au clavier */
+.bouton-couverture:focus-visible {
+  border-radius: 10px;
+  outline: 3px solid #7b2638;
+  outline-offset: 5px;
+}
+
+/* Petit texte sous la couverture */
+.consigne-couverture {
+  color: #765c50;
+  font-size: 0.95rem;
+  font-style: italic;
+  margin: 12px 0 0;
+  text-align: center;
+}
+
+/* Style général des paragraphes */
+p {
+  margin-bottom: 18px;
+  text-align: justify;
+}
+
+/* Bouton/lien principal */
+.bouton-principal {
+  background: #7b2638;
+  border: 2px solid #7b2638;
+  border-radius: 6px;
+  color: #ffffff;
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 5px;
+  padding: 12px 22px;
+  text-decoration: none;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+/* Effet au survol du bouton */
+.bouton-principal:hover {
+  background: transparent;
+  color: #7b2638;
+  transform: translateY(-2px);
+}
+
+.bouton-principal:focus-visible {
+  outline: 3px solid #c99675;
+  outline-offset: 3px;
+}
+
+/* Bloc de présentation du roman */
+.a-propos {
+  background: #f8e9e5;
+  border-left: 5px solid #7b2638;
+  border-radius: 0 8px 8px 0;
+  margin-top: 55px;
+  padding: 25px 30px;
+}
+
+.a-propos h2 {
+  border-bottom: none;
+  margin-top: 0;
+}
+
+.a-propos p {
+  margin-bottom: 0;
+  text-align: left;
+}
+
+/* Liste des personnages */
+.personnages ul {
+  display: grid;
+  gap: 16px;
+  list-style: none;
+}
+
+/* Une carte pour chaque personnage */
+.personnages li {
+  background: #fff7f2;
+  border-left: 4px solid #7b2638;
+  border-radius: 0 8px 8px 0;
+  line-height: 1.7;
+  padding: 15px 20px;
+}
+
+/* Nom du personnage */
+.personnages strong {
+  color: #7b2638;
+}
+
+/* Bloc de l'intrigue */
+.intrigue {
+  background: #f0e6e1;
+  border: 1px solid #d8b9a5;
+  border-radius: 8px;
+  margin-top: 50px;
+  padding: 25px 30px;
+}
+
+.intrigue h2 {
+  border-bottom: none;
+  margin-top: 0;
+}
+
+.intrigue p {
+  margin-bottom: 0;
+  text-align: left;
+}
+
+/* Partie qui contient le bouton et le texte de l'extrait */
+.extrait {
+  margin-top: 50px;
+}
+
+/* Phrase avant le bouton */
+.texte-extrait {
+  color: #765c50;
+  font-style: italic;
+  text-align: left;
+}
+
+/* Bouton qui affiche ou cache le texte */
+#bouton-extrait {
+  background: #7b2638;
+  border: 2px solid #7b2638;
+  border-radius: 6px;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 5px 0 25px;
+  padding: 12px 22px;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+/* Effet du bouton extrait */
+#bouton-extrait:hover {
+  background: transparent;
+  color: #7b2638;
+  transform: translateY(-2px);
+}
+
+#bouton-extrait:focus-visible {
+  outline: 3px solid #c99675;
+  outline-offset: 3px;
+}
+
+/* Boîte contenant le chapitre, lorsqu'il est affiché */
+#contenu-extrait {
+  background: #fffaf5;
+  border-left: 5px solid #7b2638;
+  border-radius: 0 8px 8px 0;
+  padding: 25px 30px;
+}
+
+/* Paragraphes de l'extrait */
+#contenu-extrait p {
+  text-align: justify;
+}
+
+/* Retire l'espace en bas du dernier paragraphe */
+#contenu-extrait p:last-child {
+  margin-bottom: 0;
+}
+
+/* Première lettre décorative du premier paragraphe */
+#contenu-extrait p:first-of-type::first-letter {
+  color: #7b2638;
+  float: left;
+  font-size: 3.5rem;
+  line-height: 0.9;
+  padding-right: 8px;
+}
+
+/* Fenêtre qui affiche la couverture agrandie */
+.fenetre-couverture {
+  background: transparent;
+  border: none;
+  margin: auto;
+  max-height: 100vh;
+  max-width: 100vw;
+  overflow: visible;
+  padding: 25px;
+}
+
+/* Fond sombre derrière la fenêtre */
+.fenetre-couverture::backdrop {
+  background: rgba(0, 0, 0, 0.88);
+}
+
+/* Image dans la fenêtre agrandie */
+.fenetre-couverture img {
+  border-radius: 8px;
+  box-shadow: 0 10px 45px rgba(0, 0, 0, 0.65);
+  display: block;
+  height: auto;
+  max-height: 90vh;
+  max-width: 90vw;
+  width: auto;
+}
+
+/* Bouton X pour fermer la fenêtre */
+.fermer-couverture {
+  background: #7b2638;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  height: 42px;
+  line-height: 32px;
+  padding: 0;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 42px;
+}
+
+/* Couleurs du bouton X au survol */
+.fermer-couverture:hover {
+  background: #ffffff;
+  color: #7b2638;
+}
+
+.fermer-couverture:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+}
+
+/* Pied de page : partie située sous le contenu principal */
+.footer {
+  background: #3e1722;
+  color: #f8e9e5;
+  padding: 38px 20px;
+  text-align: center;
+}
+
+/* Limite la largeur du contenu du footer */
+.footer-contenu {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+/* Titre dans le footer */
+.footer-titre {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.footer-auteur {
+  color: #f5c6b4;
+  font-family: Arial, sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+/* Phrase promotionnelle dans le footer */
+.footer-phrase {
+  color: #ead4cb;
+  font-style: italic;
+  margin: 0 auto 25px;
+  max-width: 620px;
+  text-align: center;
+}
+
+/* nav du footer : aligne les liens */
+.footer-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+/* Liens du footer */
+.footer-navigation a,
+.footer-contact a {
+  color: #f5c6b4;
+  text-decoration: none;
+}
+
+/* Effet lorsque la souris passe sur les liens */
+.footer-navigation a:hover,
+.footer-contact a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Contour au clavier */
+.footer-navigation a:focus-visible,
+.footer-contact a:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 4px;
+}
+
+/* Contact dans le footer */
+.footer-contact {
+  color: #ead4cb;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Mentions de droits d'auteur */
+.footer-droits {
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  color: #cfafb0;
+  font-size: 0.9rem;
+  margin-bottom: 0;
+  padding-top: 20px;
+  text-align: center;
+}
+
+/* Adaptation sur téléphone et petits écrans */
+@media (max-width: 700px) {
+  .entete-contenu {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .navigation {
+    gap: 8px 14px;
+  }
+
+  main {
+    margin: 20px 10px;
+    padding: 30px 22px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+  }
+
+  .introduction {
+    font-size: 1.05rem;
+  }
+
+  p,
+  #contenu-extrait p {
+    line-height: 1.7;
+    text-align: left;
+  }
+
+  .bouton-couverture img {
+    max-width: 280px;
+  }
+
+  .a-propos,
+  .intrigue,
+  #contenu-extrait {
+    padding: 20px;
+  }
+
+  .personnages li {
+    padding: 15px;
+  }
+
+  #bouton-extrait {
+    width: 100%;
+  }
+
+  .fenetre-couverture {
+    padding: 15px;
+  }
+
+  .fenetre-couverture img {
+    max-height: 86vh;
+    max-width: 94vw;
+  }
+
+  .fermer-couverture {
+    right: 0;
+    top: 0;
+  }
+
+  .footer {
+    padding: 30px 20px;
+  }
+
+  .footer-navigation {
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
