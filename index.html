@@ -1,299 +1,163 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <!-- Encodage des caractères : permet d'afficher les accents correctement -->
   <meta charset="UTF-8">
-
-  <!-- Rend le site lisible sur téléphone et tablette -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Titre affiché dans l'onglet du navigateur -->
-  <title>Une décision fatale</title>
+  <title>Une décision fatale — Jopie NLEMVO</title>
 
-  <!-- Description utile pour les moteurs de recherche -->
   <meta
     name="description"
-    content="Découvrez Une décision fatale, un roman d'amour, de secrets, de jalousie et de décisions irréversibles."
+    content="Site officiel du roman Une décision fatale de Jopie NLEMVO."
   >
 
-  <!-- Liaison avec le fichier CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body id="top">
 
-  <!-- En-tête du site -->
   <header class="entete">
     <div class="entete-contenu">
 
-      <!-- Nom du roman dans l'en-tête -->
       <div class="identite-auteur">
-  <a class="logo" href="#top">Une décision fatale</a>
+        <a class="logo" href="index.html">Une décision fatale</a>
 
-  <p class="auteur-haut">
-    Un roman de Jopie NLEMVO
-  </p>
-</div>
+        <p class="auteur-haut">
+          Un roman de Jopie NLEMVO
+        </p>
+      </div>
 
-      <!-- nav contient les liens de navigation principaux -->
       <nav class="navigation" aria-label="Navigation principale">
-        <a href="#a-propos">Le roman</a>
-        <a href="#personnages">Personnages</a>
-        <a href="#intrigue">L’intrigue</a>
-        <a href="#extrait">Lire l’extrait</a>
+        <a href="index.html">Accueil</a>
+        <a href="roman.html">Le roman</a>
+        <a href="personnages.html">Personnages</a>
+        <a href="intrigue.html">L’intrigue</a>
+        <a href="analyse.html">Analyse</a>
+        <a href="audio.html">Audio</a>
+        <a href="video.html">Bande-annonce</a>
+        <a href="extrait.html">Extrait</a>
       </nav>
 
     </div>
   </header>
 
-  <!-- Contenu principal de la page -->
   <main>
 
-    <!-- Présentation visuelle principale -->
-    <section class="hero" aria-labelledby="titre-roman">
-      <h1 id="titre-roman">Une décision fatale</h1>
+    <section class="hero accueil" aria-labelledby="titre-roman">
 
-      <!-- Bouton qui contient la couverture : l'image devient accessible au clavier -->
-      <button
-        id="ouvrir-couverture"
-        class="bouton-couverture"
-        type="button"
-        aria-label="Agrandir la couverture du roman Une décision fatale"
-      >
+      <div class="hero-texte">
+        <p class="sur-titre">Roman psychologique</p>
+
+        <h1 id="titre-roman">Une décision fatale</h1>
+
+        <p class="introduction">
+          Certaines décisions changent une vie.
+          D’autres en révèlent le prix.
+        </p>
+
+        <p class="resume-court">
+          Une opportunité professionnelle, une porte ouverte, un choix
+          apparemment anodin. Pour Jorel, ce premier pas déclenche une
+          succession d’événements dont les conséquences deviennent
+          irréversibles.
+        </p>
+
+        <div class="actions-accueil">
+          <a class="bouton-principal" href="roman.html">
+            Découvrir le roman
+          </a>
+
+          <a class="bouton-secondaire" href="extrait.html">
+            Lire un extrait
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visuel">
         <img
-          src="couverture.png"
-          alt="Couverture du roman Une décision fatale"
+          class="couverture-roman"
+          src="couverture-roman.jpg"
+          alt="Couverture complète du roman Une décision fatale"
         >
-      </button>
+      </div>
 
-      <p class="consigne-couverture">
-        Cliquez sur la couverture pour l’agrandir.
-      </p>
-
-      <p class="introduction">
-        Un amour peut-il survivre lorsque les décisions d’un homme deviennent fatales ?
-      </p>
-
-      <!-- Lien qui dirige l'utilisateur vers la section de l'extrait -->
-      <a class="bouton-principal" href="#extrait">
-        Découvrir l’extrait
-      </a>
     </section>
 
-    <!-- À propos du roman -->
-    <section class="a-propos" id="a-propos">
-      <h2>À propos du roman</h2>
+    <section class="parcours">
+      <h2>Explorer l’univers du roman</h2>
 
-      <p>
-        Jorel, un homme marié, voit sa vie basculer lorsqu’une rencontre
-        inattendue vient bouleverser ses certitudes. Entre amour, mensonges,
-        jalousie et manipulations, ses décisions vont entraîner une succession
-        d’événements dont les conséquences deviendront irréversibles.
-      </p>
-    </section>
+      <div class="cartes-navigation">
 
-    <!-- Présentation des personnages -->
-    <section class="personnages" id="personnages">
-      <h2>Les personnages</h2>
+        <a class="carte-navigation" href="personnages.html">
+          <h3>Les personnages</h3>
 
-      <!-- ul signifie "unordered list" : liste sans ordre numérique -->
-      <ul>
-        <li>
-          <strong>Jorel :</strong> le personnage central, pris entre ses choix,
-          ses mensonges et les conséquences de ses décisions.
-        </li>
+          <p>
+            Découvrez Jorel, Jovina, Yves, Delphine BOUK et Pyjo.
+          </p>
+        </a>
 
-        <li>
-          <strong>Jovina :</strong> une femme dont les sentiments pour Jorel se
-          mêlent au doute, à la prudence et à la recherche de la vérité.
-        </li>
+        <a class="carte-navigation" href="intrigue.html">
+          <h3>L’intrigue</h3>
 
-        <li>
-          <strong>Yves :</strong> un homme déterminé dont la colère contre Jorel
-          transforme une mission en un affrontement aux conséquences inattendues.
-        </li>
+          <p>
+            Une opportunité, une mission et une décision qui ouvre la voie à l’engrenage.
+          </p>
+        </a>
 
-        <li>
-          <strong>Delphine BOUK :</strong> l’épouse de Jorel, une femme confrontée
-          aux bouleversements de son couple et aux décisions qui vont changer sa vie.
-        </li>
-      </ul>
-    </section>
+        <a class="carte-navigation" href="analyse.html">
+          <h3>Analyse &amp; thématiques</h3>
 
-    <!-- Résumé de l'intrigue -->
-    <section class="intrigue" id="intrigue">
-      <h2>L’intrigue</h2>
+          <p>
+            Explorez la réaction en chaîne des choix de Jorel.
+          </p>
+        </a>
 
-      <p>
-        Entre amour, trahison, jalousie et manipulation, Jorel prend des
-        décisions qui vont progressivement bouleverser la vie de plusieurs
-        personnes. Ce qui commence comme une histoire d’amour va devenir un
-        engrenage dont personne ne sortira véritablement indemne.
-      </p>
-    </section>
+        <a class="carte-navigation" href="audio.html">
+          <h3>Podcast</h3>
 
-    <!-- Extrait à lire -->
-    <section class="extrait" id="extrait">
-      <h2>Lire un extrait</h2>
+          <p>
+            Entrez dans la tête de Jorel avec une analyse psychologique.
+          </p>
+        </a>
 
-      <p class="texte-extrait">
-        Découvrez le début du roman et entrez dans l’univers de Jorel.
-      </p>
+        <a class="carte-navigation" href="video.html">
+          <h3>Bande-annonce</h3>
 
-      <!-- Bouton contrôlé par JavaScript -->
-      <button
-        id="bouton-extrait"
-        type="button"
-        aria-expanded="false"
-      >
-        Afficher l’extrait
-      </button>
+          <p>
+            L’homme face à ses choix.
+          </p>
+        </a>
 
-      <!-- hidden signifie que cette partie est invisible au chargement -->
-      <div id="contenu-extrait" hidden>
-        <h3>Chapitre 1</h3>
+        <a class="carte-navigation" href="extrait.html">
+          <h3>Lire l’extrait</h3>
 
-        <p>Le premier courrier arriva un mardi matin.</p>
+          <p>
+            Découvrez le début du premier chapitre.
+          </p>
+        </a>
 
-        <p>
-          Jorel le trouva posé sur la table, entre une facture d’électricité et
-          un dessin de Pyjo.
-        </p>
-
-        <p>Il reconnut immédiatement l’enveloppe.</p>
-
-        <p>Il resta quelques secondes sans la toucher.</p>
-
-        <p>
-          Depuis qu’il avait rencontré Maître Chérubin Banz, le divorce n’était
-          plus seulement une phrase prononcée dans un bureau d’avocat.
-        </p>
-
-        <p>
-          Il avait désormais une adresse.<br>
-          Une date.<br>
-          Des documents.<br>
-          Des conséquences.
-        </p>
-
-        <p>Jorel ouvrit l’enveloppe.</p>
-
-        <p>Il parcourut les premières lignes sans vraiment les lire.</p>
-
-        <p>La procédure était engagée.</p>
-
-        <p>
-          Certaines informations devaient être communiquées. La situation des
-          enfants devait être précisée. Le logement. Les ressources. Les dépenses.
-          L’organisation de la vie quotidienne.
-        </p>
-
-        <p>Il posa le document.</p>
-
-        <p>
-          Jusqu’à présent, il avait pensé au divorce comme à une porte.<br>
-          On décidait de l’ouvrir. Puis on la franchissait.
-        </p>
-
-        <p>
-          Il commençait à comprendre que ce n’était pas une porte.<br>
-          C’était une maison entière qu’il fallait réorganiser.
-        </p>
-
-        <p>— C’est arrivé ?</p>
-
-        <p>La voix de Delphine BOUK le fit relever la tête.</p>
-
-        <p>Elle venait d’entrer dans la pièce.</p>
-
-        <p>Jorel regarda l’enveloppe.</p>
-
-        <p>— Oui.</p>
-
-        <p>Elle ne demanda pas ce que disait le courrier. Elle savait.</p>
-
-        <p>Elle s’assit en face de lui.</p>
-
-        <p>Pendant quelques secondes, aucun des deux ne parla.</p>
-
-        <p>Puis Delphine BOUK demanda :</p>
-
-        <p>— Tu sais déjà comment ça va fonctionner pour les enfants ?</p>
-
-        <p>Jorel hésita.</p>
-
-        <p>— Pas encore.</p>
-
-        <p>— Leur école ?</p>
-
-        <p>— Il faudra en parler.</p>
-
-        <p>— Le logement ?</p>
-
-        <p>— Je ne sais pas.</p>
-
-        <p>Elle acquiesça lentement.</p>
-
-        <p>
-          Il y avait dans son regard quelque chose que Jorel connaissait mal.
-          Ce n’était pas de la colère. Ce n’était pas non plus de la tristesse
-          pure. C’était la fatigue de quelqu’un qui venait de comprendre qu’une
-          décision prise par une personne pouvait modifier la vie de toute une
-          famille.
-        </p>
-
-        <p>— Tu avais réfléchi à tout ça ? demanda-t-elle.</p>
-
-        <p>Jorel baissa les yeux.</p>
-
-        <p>— Je savais que ce serait compliqué.</p>
-
-        <p>— Ce n’est pas ce que je t’ai demandé.</p>
-
-        <p>Il releva les yeux.</p>
-
-        <p>Elle poursuivit :</p>
-
-        <p>— Est-ce que tu avais réfléchi à tout ça ?</p>
-
-        <p>Jorel ne répondit pas immédiatement.</p>
-
-        <p>— Non.</p>
-
-        <p>Delphine BOUK hocha doucement la tête.</p>
-
-        <p>— Moi non plus.</p>
-
-        <p>Cette phrase le toucha davantage qu’un reproche.</p>
       </div>
     </section>
+
   </main>
 
-  <!-- footer : informations situées à la fin du site -->
   <footer class="footer">
     <div class="footer-contenu">
 
       <p class="footer-auteur">
-  Un roman de Jopie NLEMVO
-</p>
+        Un roman de Jopie NLEMVO
+      </p>
 
       <p class="footer-phrase">
-        Une histoire d’amour, de secrets et de décisions dont personne ne sortira indemne.
+        Certaines décisions changent une vie. D’autres en révèlent le prix.
       </p>
 
-      <!-- nav secondaire : liens utiles dans le pied de page -->
       <nav class="footer-navigation" aria-label="Navigation du pied de page">
-        <a href="#top">Accueil</a>
-        <a href="#a-propos">Le roman</a>
-        <a href="#personnages">Les personnages</a>
-        <a href="#extrait">Lire l’extrait</a>
+        <a href="index.html">Accueil</a>
+        <a href="roman.html">Le roman</a>
+        <a href="personnages.html">Les personnages</a>
+        <a href="extrait.html">Lire l’extrait</a>
       </nav>
-
-      <!-- Remplace l'adresse par ton adresse professionnelle ou supprime ce paragraphe -->
-      <p class="footer-contact">
-        Vous souhaitez suivre l’actualité du roman ?
-        <a href="mailto:ton-adresse@email.com">Contactez l’auteur</a>
-      </p>
 
       <p class="footer-droits">
         © 2026 Une décision fatale — Tous droits réservés.
@@ -302,24 +166,5 @@
     </div>
   </footer>
 
-  <!-- Fenêtre modale : elle reste cachée jusqu'au clic sur la couverture -->
-  <dialog id="fenetre-couverture" class="fenetre-couverture">
-    <button
-      id="fermer-couverture"
-      class="fermer-couverture"
-      type="button"
-      aria-label="Fermer l’image agrandie"
-    >
-      ×
-    </button>
-
-    <img
-      src="couverture.png"
-      alt="Couverture agrandie du roman Une décision fatale"
-    >
-  </dialog>
-
-  <!-- Liaison avec le fichier JavaScript -->
-  <script src="script.js"></script>
 </body>
 </html>
