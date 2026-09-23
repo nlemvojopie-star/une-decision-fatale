@@ -64,20 +64,31 @@ main {
   text-align: left;
 }
 
-/* Place les liens du menu sur une même ligne */
 .navigation {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px 18px;
   justify-content: center;
+  gap: 8px 14px;
+  max-width: 520px;
+  margin: 14px auto 0;
 }
 
-/* Style des liens du menu */
 .navigation a {
+  display: inline-block;
   color: #f5c6b4;
   font-family: Arial, sans-serif;
-  font-size: 0.95rem;
+  font-size: 0.88rem;
+  line-height: 1.2;
   text-decoration: none;
+  white-space: nowrap;
+  padding: 3px 0;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.navigation a:hover,
+.navigation a:focus {
+  color: #ffffff;
+  transform: translateY(-1px);
 }
 
 /* Style au passage de la souris */
@@ -1067,4 +1078,52 @@ blockquote cite {
 
 #contenu-extrait p:last-child {
   margin-bottom: 0;
+}
+
+@media (max-width: 700px) {
+  .entete {
+    padding: 16px 14px;
+  }
+
+  .entete-contenu {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .identite-auteur {
+    text-align: center;
+  }
+
+  .logo {
+    font-size: 1.25rem;
+  }
+
+  .auteur-haut {
+    margin: 5px 0 0;
+    font-size: 0.84rem;
+  }
+
+  .navigation {
+    margin-top: 2px;
+    max-width: 340px;
+  }
+}
+
+.video-youtube {
+  position: relative;
+  width: 100%;
+  max-width: 850px;
+  aspect-ratio: 16 / 9;
+  margin: 24px auto 0;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #1b0b10;
+  box-shadow: 0 10px 24px rgba(62, 23, 34, 0.18);
+}
+
+.video-youtube iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
